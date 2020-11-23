@@ -51,6 +51,13 @@ public class Main {
         bob.buySnacks(pretzel, 3);
         bob.getCashOnHand();
         pretzel.getQuantity();
+
+        //**************STRETCH*****************
+        chips.getSnackInfo(food);
+        chocolateBar.getSnackInfo(food);
+        pretzel.getSnackInfo(food);
+        soda.getSnackInfo(drink);
+        water.getSnackInfo(drink);
     }
 
     public static void main(String[] args) {

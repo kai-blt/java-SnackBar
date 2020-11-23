@@ -73,4 +73,12 @@ public class Snack {
     public double getTotal(int quantity) {
         return this.cost * (double) quantity;
     }
+
+    public void getSnackInfo(VendingMachine machine) {
+        System.out.println("Snack: " + this.name);
+        System.out.println("Vending Machine: " + machine.getName());
+        System.out.println("Quantity: " + this.quantity);
+        System.out.println("Total Cost: " + getTotal(this.quantity));
+        System.out.println();
+    }
 }
