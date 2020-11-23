@@ -29,6 +29,15 @@ public class Customer {
         this.name = name;
     }
 
+    //get & add to cashOnHand
+    public double getCashOnHand() {
+        return cashOnHand;
+    }
+
+    public void addToCashOnHand(double cashToAdd) {
+        this.cashOnHand += cashToAdd;
+    }
+
     //buy snacks
     public void buySnacks(double cost) {
         this.cashOnHand -= cost;
