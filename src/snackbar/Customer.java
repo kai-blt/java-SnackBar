@@ -2,12 +2,35 @@ package snackbar;
 
 public class Customer {
     //fields
-
-    //default constructor
+    private static int maxId = 0;
+    private int id;
+    private String name;
+    private double cashOnHand;    
 
     //constructor initialized state
+    public Customer(String name, double cashOnHand) {
+        maxId++;
+        id = maxId;
+        this.name = name;
+        this.cashOnHand = cashOnHand;
+    }
 
-    //getters
+    //get id
+    public int getId() {
+        return id;
+    }
+    
+    //get & set name
+    public String getName() {
+        return name;
+    }
 
-    //setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //buy snacks
+    public void buySnacks(double cost) {
+        this.cashOnHand -= cost;
+    }
 }
