@@ -54,8 +54,9 @@ public class Snack {
     }
 
     //get quantity
-    public int getQuantity() {
-        return quantity;
+    public void getQuantity() {
+        System.out.println("Quantity of " + this.name + " is " + quantity);
+        System.out.println();
     }
 
     //add to quantity
@@ -70,6 +71,6 @@ public class Snack {
 
     //get total cost
     public double getTotal(int quantity) {
-        return this.cost *= quantity;
+        return this.cost * (double) quantity;
     }
 }

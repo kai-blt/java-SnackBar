@@ -30,8 +30,8 @@ public class Customer {
     }
 
     //get & add to cashOnHand
-    public double getCashOnHand() {
-        return cashOnHand;
+    public void getCashOnHand() {
+        System.out.println(this.name + " cash on hand " + cashOnHand);
     }
 
     public void addToCashOnHand(double cashToAdd) {
@@ -39,7 +39,8 @@ public class Customer {
     }
 
     //buy snacks
-    public void buySnacks(double cost) {
-        this.cashOnHand -= cost;
+    public void buySnacks(Snack snack, int quantity) {
+        snack.buyQuantity(quantity);
+        this.cashOnHand -= snack.getTotal(quantity);
     }
 }
