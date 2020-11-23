@@ -1,7 +1,10 @@
 package snackbar;
+//library to handle pretty decimal output
+import java.text.DecimalFormat;
 
 public class Customer {
     //fields
+    private static DecimalFormat df = new DecimalFormat("$#,##0.00");
     private static int maxId = 0;
     private int id;
     private String name;
@@ -31,7 +34,7 @@ public class Customer {
 
     //get & add to cashOnHand
     public void getCashOnHand() {
-        System.out.println(this.name + " cash on hand " + cashOnHand);
+        System.out.println(this.name + " cash on hand " + df.format(cashOnHand));
     }
 
     public void addToCashOnHand(double cashToAdd) {

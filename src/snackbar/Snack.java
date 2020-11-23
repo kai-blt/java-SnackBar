@@ -1,7 +1,11 @@
 package snackbar;
+//library to handle pretty decimal output
+import java.text.DecimalFormat;
 
 public class Snack {
     //fields
+    private static DecimalFormat df = new DecimalFormat("$#,##0.00");
+
     private static int maxId = 0; //class field (shared by all Snack class instances)
     private int id;
     private String name;
@@ -78,7 +82,7 @@ public class Snack {
         System.out.println("Snack: " + this.name);
         System.out.println("Vending Machine: " + machine.getName());
         System.out.println("Quantity: " + this.quantity);
-        System.out.println("Total Cost: " + getTotal(this.quantity));
+        System.out.println("Total Cost: " + df.format(getTotal(this.quantity)));
         System.out.println();
     }
 }

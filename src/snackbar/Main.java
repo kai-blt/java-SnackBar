@@ -53,6 +53,8 @@ public class Main {
         pretzel.getQuantity();
 
         //**************STRETCH*****************
+        System.out.println("****STRECH GOALS****");
+        System.out.println();
         chips.getSnackInfo(food);
         chocolateBar.getSnackInfo(food);
         pretzel.getSnackInfo(food);
