@@ -10,7 +10,7 @@ public class Snack {
     private int vendingMachineId;
 
     //constructor initialized state
-    Snack(String name, int quantity, double cost, int vendingMachineId){
+    public Snack(String name, int quantity, double cost, int vendingMachineId){
         //increment maxId on Snack instantiation
         maxId++;
         //Assign this instance of Snack the current maxId
